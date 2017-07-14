@@ -1,0 +1,8 @@
+/home/superuser/Downloads/AWDOTEST/bin/Debug/netcoreapp1.1/Downloads.deps.json
+/home/superuser/Downloads/AWDOTEST/bin/Debug/netcoreapp1.1/Downloads.runtimeconfig.json
+/home/superuser/Downloads/AWDOTEST/bin/Debug/netcoreapp1.1/Downloads.runtimeconfig.dev.json
+/home/superuser/Downloads/AWDOTEST/bin/Debug/netcoreapp1.1/Downloads.dll
+/home/superuser/Downloads/AWDOTEST/bin/Debug/netcoreapp1.1/Downloads.pdb
+/home/superuser/Downloads/AWDOTEST/obj/Debug/netcoreapp1.1/Downloads.AssemblyInfo.cs
+/home/superuser/Downloads/AWDOTEST/obj/Debug/netcoreapp1.1/Downloads.dll
+/home/superuser/Downloads/AWDOTEST/obj/Debug/netcoreapp1.1/Downloads.pdb
