@@ -7042,16 +7042,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/superuser/Downloads/AWDOTEST/Downloads.csproj",
+      "projectUniqueName": "/home/superuser/Documents/AWDO/SandBox/Downloads.csproj",
       "projectName": "Downloads",
-      "projectPath": "/home/superuser/Downloads/AWDOTEST/Downloads.csproj",
-      "outputPath": "/home/superuser/Downloads/AWDOTEST/obj/",
+      "projectPath": "/home/superuser/Documents/AWDO/SandBox/Downloads.csproj",
+      "outputPath": "/home/superuser/Documents/AWDO/SandBox/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/Downloads.dll": "/home/superuser/Downloads/AWDOTEST/bin/placeholder/netcoreapp1.1/Downloads.dll"
+        "lib/netcoreapp1.1/Downloads.dll": "/home/superuser/Documents/AWDO/SandBox/bin/placeholder/netcoreapp1.1/Downloads.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

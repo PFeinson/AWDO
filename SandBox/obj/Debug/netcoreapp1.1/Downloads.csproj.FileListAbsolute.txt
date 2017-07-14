@@ -6,3 +6,11 @@
 /home/superuser/Downloads/AWDOTEST/obj/Debug/netcoreapp1.1/Downloads.AssemblyInfo.cs
 /home/superuser/Downloads/AWDOTEST/obj/Debug/netcoreapp1.1/Downloads.dll
 /home/superuser/Downloads/AWDOTEST/obj/Debug/netcoreapp1.1/Downloads.pdb
+/home/superuser/Documents/AWDO/SandBox/bin/Debug/netcoreapp1.1/Downloads.deps.json
+/home/superuser/Documents/AWDO/SandBox/bin/Debug/netcoreapp1.1/Downloads.runtimeconfig.json
+/home/superuser/Documents/AWDO/SandBox/bin/Debug/netcoreapp1.1/Downloads.runtimeconfig.dev.json
+/home/superuser/Documents/AWDO/SandBox/obj/Debug/netcoreapp1.1/Downloads.AssemblyInfo.cs
+/home/superuser/Documents/AWDO/SandBox/obj/Debug/netcoreapp1.1/Downloads.dll
+/home/superuser/Documents/AWDO/SandBox/obj/Debug/netcoreapp1.1/Downloads.pdb
+/home/superuser/Documents/AWDO/SandBox/bin/Debug/netcoreapp1.1/Downloads.dll
+/home/superuser/Documents/AWDO/SandBox/bin/Debug/netcoreapp1.1/Downloads.pdb
