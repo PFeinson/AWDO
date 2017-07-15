@@ -9,7 +9,14 @@ namespace RouteFiles {
         LinkedList<SessionEntrySet> sessionOpsSet;
         LinkedList<SessionEntryGet> sessionOpsGet;
         Url path;
-        // Constructor: Requires exactly five parameters
+        // Constructor: Requires 2 parameters for MVP
+        public Route(Header header, Url path) {
+            this.header = header;
+            this.path = path;
+        }
+
+
+        // Constructor: Requires exactly five parameters, includes most different options
          public Route(Header header, LinkedList<ViewBagEntry> viewBagOps, LinkedList<SessionEntrySet> sessionOpsSet, LinkedList<SessionEntryGet> sessionOpsGet, Url path) {
              this.header = header;
              this.viewBagOps = viewBagOps;
