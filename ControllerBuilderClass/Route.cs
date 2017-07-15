@@ -33,7 +33,8 @@ namespace RouteFiles {
             foreach (SessionEntryGet sessionEntry in sessionOpsGet) {
                 routeString += sessionEntry.toString();
             }
-             routeString += "\n\t\t}\n";
+             routeString += "\t\t\treturn View();\n";
+             routeString += "\t\t}\n";
              return routeString;
          }
     }

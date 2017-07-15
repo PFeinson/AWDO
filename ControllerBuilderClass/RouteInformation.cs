@@ -9,6 +9,10 @@ namespace RouteFiles
     {
         public String headerName;
         public LinkedList<Parameter> parameterList;
+        // Constructor: Requires 1 parameter, the name of the page
+        public Header(String headerName) {
+            this.headerName = headerName;
+        }
 
         // Constructor: Requires exactly 2 parameters
         public Header(String headerName, LinkedList<Parameter> parameterList) {
@@ -34,7 +38,13 @@ namespace RouteFiles
         public LinkedList<String> urlVars;
         public String name;
         public String action;
-        // Constructor: Requires exactly 3 inputs, otherwise would not generate usable code
+
+        // Constructor: Minimum number of args 2, route name and post/get action
+        public Url(String name, String action) {
+            this.name = name;
+            this.action = action;
+        }
+        // Constructor: Requires exactly 3 inputs, url with passed variables
         public Url(String name, LinkedList<String> urlVars, String action)
         {
             this.urlVars = urlVars;
