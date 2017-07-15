@@ -28,4 +28,16 @@ namespace RouteFiles {
             return String.Format("\n\t\t\t\tHttpContext.Session.Set{0}(\"{1}\", \"{2}\";", type, identifier, contents);
         }
     }
+
+    public class ViewBagEntry {
+        String id, contents;
+        public ViewBagEntry(String id, String contents) {
+            this.id = id;
+            this.contents = contents;
+        }
+
+        public String toString() {
+            return String.Format("\n\t\t\t\tViewBag.{0} = \"{1}\";", id, contents);
+        }
+    }
 }
