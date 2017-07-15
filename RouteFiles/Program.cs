@@ -26,18 +26,21 @@ namespace RouteFiles
             // Creates a sample Sessions operation
             SessionEntrySet demoSession = new SessionEntrySet("Int32", "userName", "test");
 
-            // Creates a LinkedList of ViewBag entries to pass to the actual Route Builder
+            // Creates a LinkedList of ViewBagEntry objects to pass to the actual Route Builder
             LinkedList<ViewBagEntry> demoBagFull = new LinkedList<ViewBagEntry>();
             demoBagFull.AddLast(demoBag);
             demoBagFull.AddLast(demoBag2);
 
-            // Creats a LinkedList of Session operations objects to pass to the actual Route Builder, forming the body
+            // Creates a LinkedList of SessionEntryGet objecfts to pass to the acutal Route Builder, forming the body
+            LinkedList<SessionEntryGet> sessionOpsGet = new LinkedList<SessionEntryGet>();
+
+            // Creates a LinkedList of SessionEntrySet objects to pass to the actual Route Builder, forming the body
             LinkedList<SessionEntrySet> sessionOps = new LinkedList<SessionEntrySet>();
             sessionOps.AddLast(demoSession);
             sessionOps.AddLast(new SessionEntrySet("Int32", "userName", "test"));
             
             // Pass all of this information to the "Route" class
-            Route sampleController = new Route(test, demoBagFull, sessionOps, testUrl);
+            Route sampleController = new Route(test, demoBagFull, sessionOps, sessionOpsGet, testUrl);
             
             // Print the result of the Route Class
             System.Console.WriteLine((sampleController.toString()));
