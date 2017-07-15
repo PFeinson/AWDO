@@ -1,18 +1,31 @@
 using System;
 
-namespace ConsoleApplication {
-    public class SessionEntry {
-        public String getSet, identifier, type;
+namespace RouteFiles {
+    public class SessionEntryGet {
+        public String identifier, type;
         public Object contents;
-        public SessionEntry(String getSet, String type, String identifier, Object contents) {
-            this.getSet = getSet;
+        public SessionEntryGet(String type, String identifier, Object contents) {
             this.identifier = identifier;
             this.contents = contents;
             this.type = type;
         }   
 
         public String toString() {
-            return String.Format("\n\t\t\t\tHttpContext.Session.{0}{1}(\"{2}\", \"{3}\");", getSet, type, identifier, contents);
+            return String.Format("\n\t\t\t\tHttpContext.Session.Get{0}(\"{1}\", \"{2}\");", type, identifier, contents);
+        }
+    }
+    
+    public class SessionEntrySet {
+        public String identifier, type;
+        public Object contents;
+        public SessionEntrySet(String type, String identifier, Object contents) {
+            this.type = type;
+            this.identifier = identifier;
+            this.contents = contents;
+        }
+
+        public String toString() {
+            return String.Format("\n\t\t\t\tHttpContext.Session.Set{0}(\"{1}\", \"{2}\";", type, identifier, contents);
         }
     }
 }

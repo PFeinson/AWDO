@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApplication {
+namespace RouteFiles {
     public class ViewBagEntry {
         String id, contents;
         public ViewBagEntry(String id, String contents) {

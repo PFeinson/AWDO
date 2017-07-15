@@ -1,0 +1,8 @@
+/home/superuser/Documents/AWDO/RouteFiles/bin/Debug/netcoreapp1.1/RouteFiles.deps.json
+/home/superuser/Documents/AWDO/RouteFiles/bin/Debug/netcoreapp1.1/RouteFiles.runtimeconfig.json
+/home/superuser/Documents/AWDO/RouteFiles/bin/Debug/netcoreapp1.1/RouteFiles.runtimeconfig.dev.json
+/home/superuser/Documents/AWDO/RouteFiles/bin/Debug/netcoreapp1.1/RouteFiles.dll
+/home/superuser/Documents/AWDO/RouteFiles/bin/Debug/netcoreapp1.1/RouteFiles.pdb
+/home/superuser/Documents/AWDO/RouteFiles/obj/Debug/netcoreapp1.1/RouteFiles.AssemblyInfo.cs
+/home/superuser/Documents/AWDO/RouteFiles/obj/Debug/netcoreapp1.1/RouteFiles.dll
+/home/superuser/Documents/AWDO/RouteFiles/obj/Debug/netcoreapp1.1/RouteFiles.pdb

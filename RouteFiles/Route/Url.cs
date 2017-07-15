@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ConsoleApplication
+namespace RouteFiles
 {
     public class Url
     {

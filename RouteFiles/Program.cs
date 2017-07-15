@@ -1,26 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-namespace ConsoleApplication
+namespace RouteFiles
 {
     public class Program
     {
         public static void Main(string[] args)
         {   
+            // Declares LinkedList of Parameters to pass to Header method
             LinkedList<Parameter> localParams = new LinkedList<Parameter>();
+            // Add to the LinkedList of Parameters
             localParams.AddLast(new Parameter("String", "testStr"));
             localParams.AddLast(new Parameter("int", "count"));
+            // Declare new header, initalize with name Index and parameters from LinkedList
             Header test = new Header("Index", localParams);
+            // Establishes Route attributes: Route and Post/Get
             Url testUrl = new Url("Index", new LinkedList<String>(), "Post");
+            // Creates a sample viewbags entries with dummy data
             ViewBagEntry demoBag = new ViewBagEntry("userName", "garbage");
             ViewBagEntry demoBag2 = new ViewBagEntry("password", "trash");
-            SessionEntry demoSession = new SessionEntry("Set", "Int32", "userName", "test");
+            // Creates a sample Sessions operation
+            SessionEntrySet demoSession = new SessionEntrySet("Int32", "userName", "test");
+            // Creates a LinkedList of ViewBag entries to pass to the acutal Route Builder
             LinkedList<ViewBagEntry> demoBagFull = new LinkedList<ViewBagEntry>();
             demoBagFull.AddLast(demoBag);
             demoBagFull.AddLast(demoBag2);
-            LinkedList<SessionEntry> sessionOps = new LinkedList<SessionEntry>();
+            // Creats a LinkedList of Session operations objects to pass to the actual Route Builder, forming the body
+            LinkedList<SessionEntrySet> sessionOps = new LinkedList<SessionEntrySet>();
             sessionOps.AddLast(demoSession);
-            sessionOps.AddLast(new SessionEntry("Get", "Int32", "userName", "test"));
+            sessionOps.AddLast(new SessionEntrySet("Int32", "userName", "test"));
             Route sampleController = new Route(test, demoBagFull, sessionOps, testUrl);
+            
+            
             System.Console.WriteLine((sampleController.toString()));
         }
     }
