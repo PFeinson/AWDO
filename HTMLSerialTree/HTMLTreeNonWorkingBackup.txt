@@ -1,0 +1,134 @@
+using System.Collections.Generic;
+using System;
+namespace HTMLSerialTree
+{
+    public class HTMLTree
+    {
+        Node root;
+        public HTMLTree()
+        {
+            // Construct the static elements of a web page
+            root = new Node("0", "", "html");
+            add("00", "", "head");
+            add("01", "", "body");
+            add("010", "", "div");
+            add("011", "", "div");
+            add("000", "", "link");
+            add("0100", "", "p");
+            add("0110", "", "p");
+            add("01101", "", "h1");
+            add("011010", "Hello", "t");
+            add("01000", "", "p");
+            add("010000", "da fuck", "TesterAgainKMS");
+            add("0101", "", "test");
+            add("010001", "doublecheck", "p");
+        }
+
+        public void add(String serial, String contents, String tag)
+        {
+            int currentSerial;
+            Node focus = root;
+            // Instantiate the LinkedListNode
+            LinkedListNode<Node> scanChildren = null;
+            int nodesNavigated = 0;
+            if (serial.Length > 0)
+            {
+                if (serial.Length == 2)
+                {
+                    focus.children.AddLast(new Node(serial, contents, tag));
+                }
+                else
+                {
+                    // Fix this later, hacking for the night
+                    //Console.WriteLine(""):
+                    for (int i = 0; i < serial.Length - 1; ++i)
+                    {
+                        // Grab the next digit in the serial number
+                        //System.Console.WriteLine(serial[i].ToString());
+                        currentSerial = Convert.ToInt32(serial[i].ToString());
+                        //System.Console.Write("pass i: " + currentSerial);
+                        // If the value of the current digit is 0, just move onto the first child
+                        if (currentSerial == 0 && focus.children.Count > 0)
+                        {
+                            focus = focus.children.First.Value;
+                        }
+                        else
+                        {
+                            if (focus.children.Count > 0)
+                            {
+                                // Assign the children's pointer to the first child
+                                scanChildren = focus.children.First;
+                                // Traverse the LinkedList<Node> until its traversed the appropriate number of times
+                                while (nodesNavigated < currentSerial && scanChildren.Next != null)
+                                {
+                                    // Traverse the linked list of children
+                                    scanChildren = scanChildren.Next;
+                                    System.Console.WriteLine("Its going here" + scanChildren.Value.tag);
+                                    ++nodesNavigated;
+                                }
+                                // Set focus to the new value of scanChildren for next round
+                                focus = scanChildren.Value;
+                            }
+
+                        }
+                    }
+                    // Reset sentinal value
+                    nodesNavigated = 0;
+                }
+
+                // Add new child to currnet active node
+                focus.children.AddLast(new Node(serial, contents, tag));
+            }
+        }
+
+
+
+        public String toString()
+        {
+            return plotTree(root);
+        }
+
+        public String plotTree(Node focus)
+        {
+            // Instantiate the LinkedListNode to navigate children
+            LinkedListNode<Node> childrenNavigator = null;
+            String page = "";
+            String tabs = "";
+            // Set up white space for formatting
+            for (int i = 0; i < focus.serial.Length - 1; ++i)
+            {
+                tabs += "\t";
+            }
+            // Build opening tag
+            page = String.Format("{0}<{1} serial=\"{2}\">\n", tabs, focus.tag, focus.serial);
+            // if the first child exists
+            if (focus.children.First != null)
+            {
+                childrenNavigator = focus.children.First;
+            }
+            // while childrenNavigator has a value
+            while (childrenNavigator != null)
+            {
+                page += plotTree(childrenNavigator.Value);
+                childrenNavigator = childrenNavigator.Next;
+            }
+            // Build closing tag
+            page += String.Format("{0}</{1} serial= {2}>\n", tabs, focus.tag, focus.serial);
+
+            return page;
+        }
+    }
+
+    public class Node
+    {
+        public LinkedList<Node> children = new LinkedList<Node>();
+        public String serial, contents, tag;
+
+        public Node(String serial, String contents, String tag)
+        {
+            this.serial = serial;
+            this.contents = contents;
+            this.tag = tag;
+        }
+    }
+}

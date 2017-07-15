@@ -1,0 +1,16 @@
+/home/superuser/Documents/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.deps.json
+/home/superuser/Documents/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.runtimeconfig.json
+/home/superuser/Documents/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.runtimeconfig.dev.json
+/home/superuser/Documents/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.dll
+/home/superuser/Documents/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.pdb
+/home/superuser/Documents/HTMLSerialTree/obj/Debug/netcoreapp1.1/HTMLSerialTree.AssemblyInfo.cs
+/home/superuser/Documents/HTMLSerialTree/obj/Debug/netcoreapp1.1/HTMLSerialTree.dll
+/home/superuser/Documents/HTMLSerialTree/obj/Debug/netcoreapp1.1/HTMLSerialTree.pdb
+/home/superuser/Documents/AWDO/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.deps.json
+/home/superuser/Documents/AWDO/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.runtimeconfig.json
+/home/superuser/Documents/AWDO/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.runtimeconfig.dev.json
+/home/superuser/Documents/AWDO/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.dll
+/home/superuser/Documents/AWDO/HTMLSerialTree/bin/Debug/netcoreapp1.1/HTMLSerialTree.pdb
+/home/superuser/Documents/AWDO/HTMLSerialTree/obj/Debug/netcoreapp1.1/HTMLSerialTree.AssemblyInfo.cs
+/home/superuser/Documents/AWDO/HTMLSerialTree/obj/Debug/netcoreapp1.1/HTMLSerialTree.dll
+/home/superuser/Documents/AWDO/HTMLSerialTree/obj/Debug/netcoreapp1.1/HTMLSerialTree.pdb
