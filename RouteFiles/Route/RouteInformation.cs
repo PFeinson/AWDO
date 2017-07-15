@@ -5,11 +5,11 @@ namespace RouteFiles
 {
     public class Header
     {
-        public String name;
+        public String headerName;
         public LinkedList<Parameter> parameterList;
 
-        public Header(String name, LinkedList<Parameter> parameterList) {
-            this.name = name;
+        public Header(String headerName, LinkedList<Parameter> parameterList) {
+            this.headerName = headerName;
             this.parameterList = parameterList;
         }
 
@@ -19,7 +19,7 @@ namespace RouteFiles
             foreach (Parameter focus in parameterList) {
                 paramsListString += (focus.toString() + ", ");
             }
-            return String.Format("\t\t\tpublic IActionResult {0}({1}){2}", name, paramsListString.Substring(0, paramsListString.Length-2), "{");
+            return String.Format("\t\t\tpublic IActionResult {0}({1}){2}", headerName, paramsListString.Substring(0, paramsListString.Length-2), "{");
         }
     }
 
@@ -43,6 +43,21 @@ namespace RouteFiles
                 pulledData += String.Format("/{0}", "{" + currentVar + "\n");
             }
             return String.Format("\t\t\t{2}\n\t\t\t[Route(\"{0}{1}\")]\n", name, pulledData, String.Format("[Http{0}]", action));
+        }
+    }
+
+    public class Parameter
+    {
+        String type, identifier;
+        public Parameter(String type, String identifier)
+        {
+            this.type = type;
+            this.identifier = identifier;
+        }
+
+        public String toString()
+        {
+            return String.Format("{0} {1}", type, identifier);
         }
     }
 }
