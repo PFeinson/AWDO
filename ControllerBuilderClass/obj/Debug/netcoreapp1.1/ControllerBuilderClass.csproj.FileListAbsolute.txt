@@ -1,0 +1,8 @@
+/home/superuser/Documents/AWDO/ControllerBuilderClass/bin/Debug/netcoreapp1.1/ControllerBuilderClass.deps.json
+/home/superuser/Documents/AWDO/ControllerBuilderClass/bin/Debug/netcoreapp1.1/ControllerBuilderClass.runtimeconfig.json
+/home/superuser/Documents/AWDO/ControllerBuilderClass/bin/Debug/netcoreapp1.1/ControllerBuilderClass.runtimeconfig.dev.json
+/home/superuser/Documents/AWDO/ControllerBuilderClass/bin/Debug/netcoreapp1.1/ControllerBuilderClass.dll
+/home/superuser/Documents/AWDO/ControllerBuilderClass/bin/Debug/netcoreapp1.1/ControllerBuilderClass.pdb
+/home/superuser/Documents/AWDO/ControllerBuilderClass/obj/Debug/netcoreapp1.1/ControllerBuilderClass.AssemblyInfo.cs
+/home/superuser/Documents/AWDO/ControllerBuilderClass/obj/Debug/netcoreapp1.1/ControllerBuilderClass.dll
+/home/superuser/Documents/AWDO/ControllerBuilderClass/obj/Debug/netcoreapp1.1/ControllerBuilderClass.pdb

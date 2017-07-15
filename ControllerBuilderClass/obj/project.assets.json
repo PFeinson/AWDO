@@ -7042,16 +7042,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/superuser/Documents/AWDO/RouteFiles/RouteFiles.csproj",
-      "projectName": "RouteFiles",
-      "projectPath": "/home/superuser/Documents/AWDO/RouteFiles/RouteFiles.csproj",
-      "outputPath": "/home/superuser/Documents/AWDO/RouteFiles/obj/",
+      "projectUniqueName": "/home/superuser/Documents/AWDO/ControllerBuilderClass/ControllerBuilderClass.csproj",
+      "projectName": "ControllerBuilderClass",
+      "projectPath": "/home/superuser/Documents/AWDO/ControllerBuilderClass/ControllerBuilderClass.csproj",
+      "outputPath": "/home/superuser/Documents/AWDO/ControllerBuilderClass/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/RouteFiles.dll": "/home/superuser/Documents/AWDO/RouteFiles/bin/placeholder/netcoreapp1.1/RouteFiles.dll"
+        "lib/netcoreapp1.1/ControllerBuilderClass.dll": "/home/superuser/Documents/AWDO/ControllerBuilderClass/bin/placeholder/netcoreapp1.1/ControllerBuilderClass.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

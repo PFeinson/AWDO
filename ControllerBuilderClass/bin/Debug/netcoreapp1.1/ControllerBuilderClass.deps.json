@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
-      "routefiles/1.0.0": {
+      "controllerbuilderclass/1.0.0": {
         "runtime": {
-          "RouteFiles.dll": {}
+          "ControllerBuilderClass.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "routefiles/1.0.0": {
+    "controllerbuilderclass/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

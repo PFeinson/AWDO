@@ -24,7 +24,7 @@ namespace RouteFiles
                 paramsListString += (focus.toString() + ", ");
             }
             // Construct final opening method statuement.
-            return String.Format("\t\t\tpublic IActionResult {0}({1}){2}", headerName, paramsListString.Substring(0, paramsListString.Length-2), " {\n");
+            return String.Format("\t\tpublic IActionResult {0}({1}){2}", headerName, paramsListString.Substring(0, paramsListString.Length-2), " {\n");
         }
     }
 
@@ -52,7 +52,7 @@ namespace RouteFiles
                 urlData += String.Format("/{0}", "{" + currentVar + "\n");
             }
             // Combine all of the data into a usable form
-            return String.Format("\t\t\t{2}\n\t\t\t[Route(\"{0}{1}\")]\n", name, urlData, String.Format("[Http{0}]", action));
+            return String.Format("\t\t{2}\n\t\t[Route(\"{0}{1}\")]\n", name, urlData, String.Format("[Http{0}]", action));
         }
     }
 

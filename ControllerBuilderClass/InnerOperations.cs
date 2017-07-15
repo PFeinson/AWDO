@@ -13,7 +13,7 @@ namespace RouteFiles {
         }   
         // Combines information into a usable line of code returns as String
         public String toString() {
-            return String.Format("\t\t\t\tHttpContext.Session.Get{0}(\"{1}\", \"{2}\");\n", type, identifier, contents);
+            return String.Format("\t\t\tHttpContext.Session.Get{0}(\"{1}\", \"{2}\");\n", type, identifier, contents);
         }
     }
 
@@ -30,7 +30,7 @@ namespace RouteFiles {
 
         // Combines information into a usable line of code returns as String
         public String toString() {
-            return String.Format("\t\t\t\tHttpContext.Session.Set{0}(\"{1}\", \"{2}\");\n", type, identifier, contents);
+            return String.Format("\t\t\tHttpContext.Session.Set{0}(\"{1}\", \"{2}\");\n", type, identifier, contents);
         }
     }
 
@@ -45,7 +45,7 @@ namespace RouteFiles {
         }
         // Combines information into a usable line of code, returns as String
         public String toString() {
-            return String.Format("\t\t\t\tViewBag.{0} = \"{1}\";\n", id, contents);
+            return String.Format("\t\t\tViewBag.{0} = \"{1}\";\n", id, contents);
         }
     }
 }

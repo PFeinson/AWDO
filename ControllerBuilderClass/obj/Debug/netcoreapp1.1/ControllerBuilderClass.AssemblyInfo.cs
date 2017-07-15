@@ -3,11 +3,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("RouteFiles")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ControllerBuilderClass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Package Description")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("RouteFiles")]
-[assembly: System.Reflection.AssemblyTitleAttribute("RouteFiles")]
+[assembly: System.Reflection.AssemblyProductAttribute("ControllerBuilderClass")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ControllerBuilderClass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
