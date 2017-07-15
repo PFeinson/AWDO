@@ -8,23 +8,26 @@ namespace HTMLSerialTree
         public HTMLTree()
         {
             // Construct the static elements of a web page
-            root = new Node("0", "", "html");
-            add("00", "", "head");
-            add("01", "", "body");
+            root = new Node("0", "", "html", "");
+            add("00", "", "head", "");
+            add("01", "", "body", "");
             // Test data for copy and paste from terminal into text editor html integrity test
             // Website body 
-            add("010", "", "div");
-            add("0100", "", "p");
-            add("01000", "Hello World!", "h1");
-            add ("011", "", "div");
+            add("010", "", "div", "class=\"navBar\" width=\"300px\" height=\"150px\"");
+            add("0100", "", "p", "");
+            add("01000", "Hello World!", "h1", "");
+            add("011", "", "div", "");
             // head tag elements
             add("000", "", "link");
-            add("001", "", "source");
+            add("001", "", "source", "");
             // body of site extended
-            add("0110", "This really works???", "h4");
+            add("0110", "This really works???", "h4", "");
         }
 
-        public void add(String serial, String contents, String tag)
+        public void add(String serial, String contents, String tag) {
+            add(serial, contents, tag, "");
+        }
+        public void add(String serial, String contents, String tag, String attributes)
         {
             // DEBUGGING
             // Display information about the node currently being assessed
@@ -32,7 +35,7 @@ namespace HTMLSerialTree
             // Variable for each digit of the serial number
             int currentSerial;
             // Variable for the number of nodes explored in the LinkedList<Node>
-            int nodesNavigated = 0;;
+            int nodesNavigated = 0; ;
             // Kill switch incase returns fail
             Boolean created = false;
             // Start navigation with root
@@ -43,7 +46,14 @@ namespace HTMLSerialTree
             // If its body or head
             if (serial.Length == 2 && !created)
             {
-                focus.children.AddLast(new Node(serial, contents, tag));
+                if (attributes.Length <= 0)
+                {
+                    focus.children.AddLast(new Node(serial, contents, tag));
+                }
+                else
+                {
+                    focus.children.AddLast(new Node(serial, contents, tag, attributes));
+                }
                 created = true;
                 return;
             }
@@ -63,7 +73,14 @@ namespace HTMLSerialTree
                         {
                             // Add new node and break out of method
                             created = true;
-                            focus.children.AddLast(new Node(serial, contents, tag));
+                            if (attributes.Length <= 0)
+                            {
+                                focus.children.AddLast(new Node(serial, contents, tag));
+                            }
+                            else
+                            {
+                                focus.children.AddLast(new Node(serial, contents, tag, attributes));
+                            }
                             return;
                         }
                         // Otherwise if the first child exists, shift focus to that
@@ -98,7 +115,14 @@ namespace HTMLSerialTree
                         if (focus.children.First == null && !created)
                         {
                             // Add the new node and exit the method
-                            focus.children.AddLast(new Node(serial, contents, tag));
+                            if (attributes.Length <= 0)
+                            {
+                                focus.children.AddLast(new Node(serial, contents, tag));
+                            }
+                            else
+                            {
+                                focus.children.AddLast(new Node(serial, contents, tag, attributes));
+                            }
                             created = true;
                             return;
                         }
@@ -108,7 +132,14 @@ namespace HTMLSerialTree
                 }
                 if (!created)
                 {
-                    focus.children.AddLast(new Node(serial, contents, tag));
+                    if (attributes.Length <= 0)
+                    {
+                        focus.children.AddLast(new Node(serial, contents, tag));
+                    }
+                    else
+                    {
+                        focus.children.AddLast(new Node(serial, contents, tag, attributes));
+                    }
                 }
             }
             //Console.WriteLine(plotTree(root));
@@ -133,7 +164,15 @@ namespace HTMLSerialTree
                 tabs += "\t";
             }
             // Build opening tag
-            page = String.Format("{0}<{1} serial=\"{2}\">\n", tabs, focus.tag, focus.serial);
+            // If attributes exist....
+            if (focus.attributes != null)
+            {
+                page = String.Format("{0}<{1} serial=\"{2}\" {3}>\n", tabs, focus.tag, focus.serial, focus.attributes);
+            }
+            else
+            {
+                page = String.Format("{0}<{1} serial=\"{2}\">\n", tabs, focus.tag, focus.serial);
+            }
             // if the first child exists
             if (focus.children.First != null)
             {
@@ -162,7 +201,8 @@ namespace HTMLSerialTree
         // Store children in LinkedList for serial traversal
         public LinkedList<Node> children = new LinkedList<Node>();
         // Instantiate components of a Node
-        public String serial, contents, tag;
+        public String serial, contents, tag, attributes;
+
 
         // Constructor
         public Node(String serial, String contents, String tag)
@@ -170,6 +210,19 @@ namespace HTMLSerialTree
             this.serial = serial;
             this.contents = contents;
             this.tag = tag;
+        }
+
+        public Node(String serial, String contents, String tag, String attributes)
+        {
+            this.serial = serial;
+            this.contents = contents;
+            this.tag = tag;
+            this.attributes = attributes;
+        }
+
+        public void addAttributes(String attributes)
+        {
+            this.attributes += (" " + attributes);
         }
     }
 }
