@@ -25,8 +25,12 @@ namespace RouteFiles {
             information += String.Format("namespace {0}.Controllers\n{{\n", controllerName);
             // Builds class
             information += String.Format("\tpublic class {0}Controller : Controller {{\n", controllerName);
-            //------------------------------
-            //------------------------------
+
+
+            /*
+
+                This is a sample of a complete route with sessions going in and out and various view bag operations
+
             // Insert Route information here
             //------------------------------
             //------------------------------
@@ -72,9 +76,11 @@ namespace RouteFiles {
             //---------------------------
             //---------------------------
             // End Route Information Area
-            //---------------------------
-            //---------------------------
-            //---------------------------
+            */
+            Header sampleHeader = new Header(controllerName);
+            Url sampleUrl = new Url(controllerName, "Get");
+            Route sampleController = new Route(sampleHeader, sampleUrl);
+            information += sampleController.toString();
             information += "\t}\n}";
             return information;
         }

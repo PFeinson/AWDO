@@ -22,13 +22,18 @@ namespace RouteFiles
 
         // Builder method: Turns data into usable String
         public String toString() {
-            String paramsListString = "";
-            // append each parameter to header
-            foreach (Parameter focus in parameterList) {
-                paramsListString += (focus.toString() + ", ");
+            if (parameterList != null) {
+                String paramsListString = "";
+                // append each parameter to header
+                foreach (Parameter focus in parameterList) {
+                    paramsListString += (focus.toString() + ", ");
+                }
+                // Construct final opening method statuement.
+                return String.Format("\t\tpublic IActionResult {0}({1}){2}", headerName, paramsListString.Substring(0, paramsListString.Length-2), " {\n");
             }
-            // Construct final opening method statuement.
-            return String.Format("\t\tpublic IActionResult {0}({1}){2}", headerName, paramsListString.Substring(0, paramsListString.Length-2), " {\n");
+            else {
+                return String.Format("\t\tpublic IActionResult {0}() {{\n", headerName);
+            }
         }
     }
 
@@ -54,15 +59,20 @@ namespace RouteFiles
 
         // Builder method that combines data into usable String
         public String toString()
-        {
-            String urlData = "";
-            // Attach Variables passed through Url
-            foreach (String currentVar in urlVars)
-            {
-                urlData += String.Format("/{0}", "{" + currentVar + "\n");
+        {  
+            if (urlVars != null) {
+                String urlData = "";
+                // Attach Variables passed through Url
+                foreach (String currentVar in urlVars)
+                {
+                    urlData += String.Format("/{0}", "{" + currentVar + "\n");
+                }
+                // Combine all of the data into a usable form
+                return String.Format("\t\t{2}\n\t\t[Route(\"{0}{1}\")]\n", name, urlData, String.Format("[Http{0}]", action));
             }
-            // Combine all of the data into a usable form
-            return String.Format("\t\t{2}\n\t\t[Route(\"{0}{1}\")]\n", name, urlData, String.Format("[Http{0}]", action));
+            else {
+                return String.Format("\t\t{1}\n\t\t[Route(\"{0}\")]\n", name, String.Format("[Http{0}]", action));
+            }
         }
     }
 
