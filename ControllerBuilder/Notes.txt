@@ -1,3 +1,0 @@
-Included Program.cs file contains a demonstration of what JSON data will
- be needed. 
-
